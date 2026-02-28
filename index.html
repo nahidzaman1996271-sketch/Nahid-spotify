@@ -12,8 +12,6 @@
         html,body{height:100%;overflow:hidden;}
         body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;}
         .app{display:flex;flex:1;overflow:hidden;gap:8px;padding:8px;padding-bottom:0;}
-
-        /* SIDEBAR */
         .sidebar{width:290px;flex-shrink:0;background:var(--sidebar-bg);border-radius:12px;display:flex;flex-direction:column;overflow:hidden;}
         .sidebar-header{padding:18px 18px 14px;border-bottom:1px solid var(--border);}
         .sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
@@ -64,8 +62,6 @@
         .sidebar-track.active .s-name{color:var(--green);}
         .s-artist{font-size:.72rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px;}
         .s-dur{font-size:.72rem;color:var(--text-muted);flex-shrink:0;}
-
-        /* MAIN */
         .main{flex:1;background:var(--sidebar-bg);border-radius:12px;display:flex;flex-direction:column;overflow:hidden;}
         .playlist-hero{display:flex;gap:24px;align-items:flex-end;padding:24px 24px 20px;position:relative;overflow:hidden;flex-shrink:0;}
         .playlist-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(29,185,84,0.13),transparent 60%);}
@@ -126,8 +122,6 @@
         .liked-empty p{font-size:.84rem;line-height:1.5;}
         .liked-empty-btn{background:var(--green);color:#000;border:none;padding:10px 24px;border-radius:20px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .15s;}
         .liked-empty-btn:hover{background:#1ed760;}
-
-        /* QUEUE */
         .queue-list{flex:1;overflow-y:auto;padding:6px 0;display:none;}
         .queue-list::-webkit-scrollbar{width:5px;}
         .queue-list::-webkit-scrollbar-thumb{background:var(--text-faint);border-radius:5px;}
@@ -144,8 +138,6 @@
         .queue-empty{display:none;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:12px;color:var(--text-muted);padding:40px;text-align:center;font-size:.88rem;}
         .queue-empty.show{display:flex;}
         .queue-empty i{font-size:3rem;color:var(--text-faint);}
-
-        /* EQ PANEL */
         .eq-panel{position:fixed;bottom:100px;right:20px;background:#1c1c1c;border:1px solid var(--border);border-radius:16px;padding:20px;z-index:400;display:none;width:310px;box-shadow:0 20px 60px rgba(0,0,0,0.7);}
         .eq-panel.open{display:block;}
         .panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
@@ -164,8 +156,6 @@
         input[type=range].eq-sl::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--green);cursor:pointer;}
         input[type=range].eq-sl::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--green);cursor:pointer;border:none;}
         .eq-val{font-size:.62rem;color:var(--green);font-weight:700;min-width:28px;text-align:center;}
-
-        /* SLEEP PANEL */
         .sleep-panel{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#1c1c1c;border:1px solid var(--border);border-radius:16px;padding:20px;z-index:400;display:none;width:260px;box-shadow:0 20px 60px rgba(0,0,0,0.7);}
         .sleep-panel.open{display:block;}
         .sleep-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
@@ -174,8 +164,6 @@
         .sleep-opt.active{background:rgba(255,150,50,0.12);border-color:rgba(255,150,50,0.5);color:#ff9632;}
         .sleep-cancel{width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:10px;padding:8px;text-align:center;cursor:pointer;font-size:.8rem;color:var(--text-muted);font-family:'DM Sans',sans-serif;transition:all .2s;}
         .sleep-cancel:hover{color:var(--text);}
-
-        /* PLAYER BAR */
         .player-bar{background:#0f0f0f;border-top:1px solid var(--border);padding:10px 18px;display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:14px;flex-shrink:0;height:88px;}
         .now-playing{display:flex;align-items:center;gap:12px;min-width:0;}
         .now-art{width:52px;height:52px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.9rem;background:var(--card-bg);}
@@ -209,15 +197,11 @@
         .vol-fill{height:100%;background:var(--text);border-radius:4px;width:70%;pointer-events:none;}
         .mode-badge{font-size:.68rem;color:var(--green);font-weight:600;background:rgba(29,185,84,0.12);border:1px solid rgba(29,185,84,0.3);padding:2px 8px;border-radius:4px;display:none;}
         .mode-badge.show{display:inline-block;}
-
-        /* COLORS */
         .color-1{background:linear-gradient(135deg,#1a3a6a,#0d2040)}.color-2{background:linear-gradient(135deg,#6a1a3a,#400d20)}
         .color-3{background:linear-gradient(135deg,#6a3a1a,#40200d)}.color-4{background:linear-gradient(135deg,#1a6a3a,#0d4020)}
         .color-5{background:linear-gradient(135deg,#3a1a6a,#200d40)}.color-6{background:linear-gradient(135deg,#6a6a1a,#40400d)}
         .color-7{background:linear-gradient(135deg,#1a5a6a,#0d3540)}.color-8{background:linear-gradient(135deg,#6a1a6a,#40004a)}
         .color-9{background:linear-gradient(135deg,#2a6a1a,#154010)}.color-10{background:linear-gradient(135deg,#6a2a1a,#401510)}
-
-        /* MOBILE */
         .mobile-nav{display:none;background:#0f0f0f;border-top:1px solid var(--border);height:58px;flex-shrink:0;align-items:center;justify-content:space-around;padding:0 4px;}
         .mob-nav-btn{background:none;border:none;cursor:pointer;color:var(--text-muted);display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 10px;border-radius:8px;transition:color .2s;position:relative;}
         .mob-nav-btn i{font-size:1.05rem;}
@@ -245,8 +229,6 @@
         .mob-empty{text-align:center;padding:40px 20px;color:var(--text-muted);display:none;}
         .mob-empty.show{display:block;}
         .mob-empty i{font-size:2rem;display:block;margin-bottom:10px;color:var(--text-faint);}
-
-        /* MINI PLAYER */
         .mini-player{display:none;background:#1a1a1a;border-top:1px solid var(--border);flex-direction:column;flex-shrink:0;}
         .mini-top{display:flex;align-items:center;gap:12px;padding:10px 14px 6px;cursor:pointer;}
         .mini-art{width:42px;height:42px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:var(--card-bg);}
@@ -255,14 +237,11 @@
         .mini-artist{font-size:.72rem;color:var(--text-muted);margin-top:2px;}
         .mini-play-btn{width:36px;height:36px;border-radius:50%;border:none;background:var(--text);color:#000;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
         .mini-next{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:1.1rem;padding:4px;flex-shrink:0;}
-        /* ✅ FIXED MOBILE PROGRESS BAR - large touch target */
         .mini-prog-wrap{padding:0 14px 10px;touch-action:none;}
         .mini-prog-outer{width:100%;height:20px;display:flex;align-items:center;cursor:pointer;touch-action:none;position:relative;}
         .mini-prog-track{width:100%;height:3px;background:var(--progress-bg);border-radius:3px;pointer-events:none;transition:height .15s;}
         .mini-prog-outer.drag .mini-prog-track{height:6px;}
         .mini-prog-fill{height:100%;background:var(--green);border-radius:3px;width:0%;pointer-events:none;}
-
-        /* NOW PLAYING SCREEN */
         .nps{display:none;position:fixed;inset:0;z-index:200;flex-direction:column;overflow:hidden;}
         .nps.open{display:flex;}
         .nps-bg{position:absolute;inset:0;background:linear-gradient(180deg,#1a3a2a 0%,#0a0a0a 55%);z-index:0;transition:background .6s;}
@@ -277,7 +256,6 @@
         .nps-info{margin-bottom:18px;display:flex;align-items:flex-start;justify-content:space-between;}
         .nps-name{font-size:1.5rem;font-weight:700;margin-bottom:4px;}
         .nps-artist{font-size:.9rem;color:var(--text-muted);}
-        /* ✅ FIXED NPS SEEK — large touch area */
         .nps-prog-wrap{margin-bottom:8px;touch-action:none;}
         .nps-prog-outer{width:100%;height:28px;display:flex;align-items:center;cursor:pointer;touch-action:none;position:relative;}
         .nps-prog-track{width:100%;height:5px;background:var(--progress-bg);border-radius:5px;pointer-events:none;transition:height .15s;}
@@ -291,13 +269,11 @@
         .nps-ctrl{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:1.1rem;padding:8px;transition:color .15s;}
         .nps-ctrl.active{color:var(--green);}
         .nps-play-btn{width:58px;height:58px;border-radius:50%;border:none;background:var(--text);color:#000;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-        /* ✅ FIXED NPS VOLUME */
         .nps-vol{display:flex;align-items:center;gap:12px;}
         .nps-vol-icon{color:var(--text-muted);font-size:.9rem;}
         .nps-vol-outer{flex:1;height:24px;display:flex;align-items:center;cursor:pointer;touch-action:none;position:relative;}
         .nps-vol-track{width:100%;height:4px;background:var(--progress-bg);border-radius:4px;pointer-events:none;}
         .nps-vol-fill{height:100%;background:var(--green);border-radius:4px;width:70%;pointer-events:none;}
-
         @media(max-width:860px){
             .sidebar{display:none;}
             .track-list-header,.track-row{grid-template-columns:34px 1fr 54px;}
@@ -446,7 +422,6 @@ const TRACKS=[
 for(let i=12;i<=100;i++) TRACKS.push(mk(i));
 </script>
 
-<!-- APP HTML -->
 <div class="app">
     <div class="sidebar">
         <div class="sidebar-header">
@@ -490,7 +465,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
     </div>
 </div>
 
-<!-- DESKTOP PLAYER -->
 <div class="player-bar">
     <div class="now-playing">
         <div class="now-art" id="now-art">🎵</div>
@@ -519,7 +493,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
     </div>
 </div>
 
-<!-- MINI PLAYER (mobile) -->
 <div class="mini-player" id="mini-player">
     <div class="mini-top" onclick="openNPS()">
         <div class="mini-art" id="mini-art">🎵</div>
@@ -527,7 +500,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
         <button class="mini-play-btn" onclick="event.stopPropagation();document.getElementById('play-pause-btn').click()"><i class="fas fa-play" id="mini-play-icon"></i></button>
         <button class="mini-next" onclick="event.stopPropagation();playNext()"><i class="fas fa-step-forward"></i></button>
     </div>
-    <!-- ✅ FIXED: proper touch-friendly progress bar -->
     <div class="mini-prog-wrap">
         <div class="mini-prog-outer" id="mini-prog-outer">
             <div class="mini-prog-track"><div class="mini-prog-fill" id="mini-prog-fill"></div></div>
@@ -535,7 +507,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
     </div>
 </div>
 
-<!-- MOBILE BOTTOM NAV -->
 <div class="mobile-nav">
     <button class="mob-nav-btn active" id="mob-home-btn" onclick="showHome();closeAllMob()"><i class="fas fa-home"></i><span>Home</span></button>
     <button class="mob-nav-btn" onclick="openMobSearch()"><i class="fas fa-search"></i><span>Search</span></button>
@@ -544,28 +515,24 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
     <button class="mob-nav-btn" onclick="openMobQueue()"><i class="fas fa-list-ol"></i><span>Queue</span></button>
 </div>
 
-<!-- MOBILE SEARCH OVERLAY -->
 <div class="mob-overlay" id="mob-search-ov">
     <div class="mob-overlay-header"><button class="mob-back" onclick="closeMobSearch()"><i class="fas fa-arrow-left"></i></button><div class="mob-search-wrap"><i class="fas fa-search"></i><input type="text" id="mob-search-input" placeholder="Search songs…" autocomplete="off"></div></div>
     <div class="mob-scroll" id="mob-search-results"></div>
     <div class="mob-empty" id="mob-search-empty"><i class="fas fa-search"></i>No results</div>
 </div>
 
-<!-- MOBILE LIKED OVERLAY -->
 <div class="mob-overlay" id="mob-liked-ov">
     <div class="mob-overlay-header"><button class="mob-back" onclick="closeMobLiked()"><i class="fas fa-arrow-left"></i></button><span class="mob-overlay-title">❤️ Liked Songs</span><span class="mob-overlay-sub" id="mob-liked-sub">0 songs</span></div>
     <div class="mob-scroll" id="mob-liked-list"></div>
     <div class="mob-empty" id="mob-liked-empty"><i class="fas fa-heart-broken"></i>No liked songs yet</div>
 </div>
 
-<!-- MOBILE QUEUE OVERLAY -->
 <div class="mob-overlay" id="mob-queue-ov">
     <div class="mob-overlay-header"><button class="mob-back" onclick="closeMobQueue()"><i class="fas fa-arrow-left"></i></button><span class="mob-overlay-title">🎵 Queue</span><span class="mob-overlay-sub" id="mob-queue-sub"></span></div>
     <div class="mob-scroll" id="mob-queue-list"></div>
     <div class="mob-empty" id="mob-queue-empty"><i class="fas fa-list-ol"></i>Play a song to see queue</div>
 </div>
 
-<!-- NOW PLAYING SCREEN (mobile fullscreen) -->
 <div class="nps" id="nps">
     <div class="nps-bg" id="nps-bg"></div>
     <div class="nps-body">
@@ -576,7 +543,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
         </div>
         <div class="nps-art-wrap"><div class="nps-art" id="nps-art">🎵</div></div>
         <div class="nps-info"><div><div class="nps-name" id="nps-name">Select a song</div><div class="nps-artist" id="nps-artist">—</div></div></div>
-        <!-- ✅ FIXED seek bar -->
         <div class="nps-prog-wrap">
             <div class="nps-prog-outer" id="nps-prog-outer">
                 <div class="nps-prog-track"><div class="nps-prog-fill" id="nps-prog-fill"></div></div>
@@ -591,7 +557,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
             <button class="nps-ctrl" onclick="playNext()"><i class="fas fa-step-forward" style="font-size:1.3rem"></i></button>
             <button class="nps-ctrl" id="nps-repeat-btn" onclick="toggleRepeat()"><i class="fas fa-redo"></i></button>
         </div>
-        <!-- ✅ FIXED volume -->
         <div class="nps-vol">
             <i class="nps-vol-icon fas fa-volume-down"></i>
             <div class="nps-vol-outer" id="nps-vol-outer"><div class="nps-vol-track"><div class="nps-vol-fill" id="nps-vol-fill"></div></div></div>
@@ -600,7 +565,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
     </div>
 </div>
 
-<!-- EQ PANEL -->
 <div class="eq-panel" id="eq-panel">
     <div class="panel-header"><span class="panel-title">🎚️ Equalizer</span><button class="panel-close" onclick="toggleEqPanel()"><i class="fas fa-times"></i></button></div>
     <div class="eq-presets">
@@ -614,7 +578,6 @@ for(let i=12;i<=100;i++) TRACKS.push(mk(i));
     <div class="eq-bands" id="eq-bands"></div>
 </div>
 
-<!-- SLEEP TIMER PANEL -->
 <div class="sleep-panel" id="sleep-panel">
     <div class="panel-header"><span class="panel-title">⏰ Sleep Timer</span><button class="panel-close" onclick="toggleSleepPanel()"><i class="fas fa-times"></i></button></div>
     <div class="sleep-options">
@@ -722,25 +685,26 @@ function genShuffleQ(start){
 function nextShuffleIdx(){shufflePos++;if(shufflePos>=shuffleQ.length){genShuffleQ(shuffleQ[shuffleQ.length-1]);shufflePos=1;}return shuffleQ[shufflePos];}
 function prevShuffleIdx(){shufflePos=Math.max(0,shufflePos-1);return shuffleQ[shufflePos];}
 
-/* ══ ✅ DURATION FIX ══
-   Use a small staggered preload loop — no heavy simultaneous requests */
+/* ══ FIX 1: FAST PARALLEL BATCH DURATION LOADING ══ */
 function preloadDurations(){
+    const BATCH=10;
     let i=0;
-    function next(){
-        if(i>=TRACKS.length)return;
-        const audio=audios[i], idx=i; i++;
-        if(!audio){next();return;}
-        if(audio.readyState>=1&&audio.duration&&!isNaN(audio.duration)){setDur(idx,audio.duration);setTimeout(next,20);return;}
-        audio.preload='metadata';
-        const cb=()=>{
-            if(audio.duration&&!isNaN(audio.duration))setDur(idx,audio.duration);
-            audio.removeEventListener('loadedmetadata',cb);
-            setTimeout(next,30); // stagger to avoid browser blocking
-        };
-        audio.addEventListener('loadedmetadata',cb);
-        audio.load();
+    function loadBatch(){
+        const end=Math.min(i+BATCH,TRACKS.length);
+        for(;i<end;i++){
+            const audio=audios[i],idx=i;
+            if(!audio)continue;
+            if(audio.readyState>=1&&audio.duration&&!isNaN(audio.duration)){setDur(idx,audio.duration);continue;}
+            audio.preload='metadata';
+            audio.addEventListener('loadedmetadata',function cb(){
+                if(audio.duration&&!isNaN(audio.duration))setDur(idx,audio.duration);
+                audio.removeEventListener('loadedmetadata',cb);
+            });
+            audio.load();
+        }
+        if(i<TRACKS.length)setTimeout(loadBatch,300);
     }
-    next();
+    loadBatch();
 }
 
 function setDur(i,sec){
@@ -749,7 +713,6 @@ function setDur(i,sec){
     const sd=document.getElementById(`sdur-${i}`);
     if(td)td.textContent=TRACKS[i].duration;
     if(sd)sd.textContent=TRACKS[i].duration;
-    // also update liked/queue rows if present
     document.querySelectorAll(`[data-dur="${i}"]`).forEach(el=>el.textContent=TRACKS[i].duration);
 }
 
@@ -877,11 +840,22 @@ function playSong(idx){
     if(isShuffle)genShuffleQ(idx);
     const audio=audios[idx],t=TRACKS[idx];
     if(!audio)return;
+
+    /* ══ FIX 2: Set preload=auto on the active song so seeking is instant ══ */
+    audio.preload='auto';
+
     if(audioCtx)hookAudio(audio);
     audio.volume=isMuted?0:volume;
     audio.play().catch(()=>{});
     isPlaying=true;setActive(idx,true);updateNP(t);updatePlayBtns(true);
     if(currentView==='queue')buildQueueList();
+
+    /* ══ FIX 3: Preload next song metadata so it starts instantly ══ */
+    const nextIdx=(idx+1)%TRACKS.length;
+    if(audios[nextIdx]&&audios[nextIdx].preload==='none'){
+        audios[nextIdx].preload='metadata';
+        audios[nextIdx].load();
+    }
 }
 function setActive(idx,on){
     document.getElementById(`sidebar-${idx}`)?.classList.toggle('active',on);
@@ -943,7 +917,7 @@ audios.forEach((audio,i)=>{
     });
 });
 
-/* ══ ✅ SEEK — reusable helper ══ */
+/* ══ SEEK ══ */
 function seekFromX(el,x){
     const r=el.getBoundingClientRect();
     const pct=Math.max(0,Math.min(1,(x-r.left)/r.width));
@@ -960,7 +934,7 @@ progTrack.addEventListener('mousedown',e=>{isDragging=true;seekFromX(progTrack,e
 document.addEventListener('mousemove',e=>{if(isDragging)seekFromX(progTrack,e.clientX);});
 document.addEventListener('mouseup',()=>{isDragging=false;});
 
-/* ✅ Mobile mini progress — touch */
+/* Mobile mini progress */
 (()=>{
     const outer=document.getElementById('mini-prog-outer');let active=false;
     const getX=e=>e.touches?e.touches[0].clientX:e.clientX;
@@ -970,7 +944,7 @@ document.addEventListener('mouseup',()=>{isDragging=false;});
     outer.addEventListener('click',e=>seekFromX(outer,e.clientX));
 })();
 
-/* ✅ NPS seek — touch */
+/* NPS seek */
 (()=>{
     const outer=document.getElementById('nps-prog-outer');let active=false;
     const getX=e=>e.touches?e.touches[0].clientX:e.clientX;
@@ -980,7 +954,7 @@ document.addEventListener('mouseup',()=>{isDragging=false;});
     outer.addEventListener('click',e=>seekFromX(outer,e.clientX));
 })();
 
-/* ✅ NPS volume — touch */
+/* NPS volume */
 (()=>{
     const outer=document.getElementById('nps-vol-outer');
     const doVol=e=>{const r=outer.getBoundingClientRect();const x=e.touches?e.touches[0].clientX:e.clientX;setVol(Math.max(0,Math.min(1,(x-r.left)/r.width)));};
@@ -1051,7 +1025,6 @@ document.addEventListener('keydown',e=>{
     if(e.code==='Escape'){closeNPS();document.getElementById('eq-panel').classList.remove('open');document.getElementById('sleep-panel').classList.remove('open');}
 });
 
-/* Close panels on outside click */
 document.addEventListener('click',e=>{
     if(!e.target.closest('#eq-panel')&&!e.target.closest('#eq-btn'))document.getElementById('eq-panel').classList.remove('open');
     if(!e.target.closest('#sleep-panel')&&!e.target.closest('#sleep-btn'))document.getElementById('sleep-panel').classList.remove('open');
@@ -1061,7 +1034,6 @@ function fmt(sec){if(!sec||isNaN(sec)||sec===Infinity)return'—';return`${Math.
 
 /* ══ INIT ══ */
 buildSidebar();buildHomeList();buildEqUI();showHome();
-// ✅ Start loading durations after render
 setTimeout(preloadDurations,400);
 </script>
 </body>

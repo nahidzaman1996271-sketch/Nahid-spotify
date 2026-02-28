@@ -407,7 +407,7 @@
 const COLORS=['color-1','color-2','color-3','color-4','color-5','color-6','color-7','color-8','color-9','color-10'];
 const EMOJIS=['🎵','🎶','🎸','🎹','🎺','🎻','🥁','🎷','🎼','🎤'];
 function mk(id,name,artist,album){return{id,name:name||`Song ${id}`,artist:artist||'Artist',album:album||'Unknown',emoji:EMOJIS[(id-1)%10],duration:'',colorClass:COLORS[(id-1)%10]};}
-const TRACKS=[
+const TRACK_DATA=[
     mk(1,"Jeno Tomari Kase","Ash King & Somlata Acharyya Chowdhury","Jeno Tomari Kase"),
     mk(2,"Egiye De","Arijit Singh & Madhubanti Bagchi","Shudhu Tomari Jonyo"),
     mk(3,"O Mon Pakhi","Shreya Ghoshal","Mon Je Kore Uru Uru"),
@@ -419,8 +419,9 @@ const TRACKS=[
     mk(11,"Confidence","Kim","Confidence"),
     mk(12,"Hotel Room","FLVCKKA, Sleezy O & Maury","Hotel Room"),
     mk(13,"Hasta El Amanecer","Nicky Jam","Hasta El Amanecer"),
+    // add new songs here ↓
 ];
-for(let i=14;i<=100;i++) TRACKS.push(mk(i));
+const TRACKS=Array.from({length:100},(_,i)=>TRACK_DATA.find(t=>t.id===i+1)||mk(i+1));
 </script>
 
 <div class="app">
